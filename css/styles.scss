@@ -81,11 +81,11 @@ html {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 5vw;
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 4vw;
 }
 
 h3 {
@@ -186,7 +186,7 @@ body {
 		min-width: 60px;
 		height: 10vh;
 		min-height: 60px;
-		background-color: #F8F8F8;
+		background-color: #becde9;
 		transition: all .25s ease-in-out;
 
 		&.show {
@@ -733,6 +733,13 @@ em {
 	line-height: 1;
 }
 
+.sidebar {
+	// display: none;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20%;
+}
+
 section {
 	&.content {
 		padding: 5.7rem 0;
@@ -757,7 +764,7 @@ section {
 			}
 		}
 	}
-	
+
 	// &#event {
 	// 	// display: none;
 	// 	// background: url(../assets/img/event01.jpeg);
@@ -785,7 +792,7 @@ section {
 		// background: $gr-orange;
 		-webkit-box-shadow: 0px -10px 20px 0px rgb(0, 0, 0 / 48%);
 		box-shadow: 0px -10px 20px 0px rgb(0, 0, 0 / 48%);
-			
+
 		#img-nom {
 			background: url(../assets/img/01.jpeg);
 			background-size: cover;
@@ -821,7 +828,12 @@ section {
 	}
 
 	&#valeurs {
-		background: #11204b;
+		// background: #11204b;
+		background: url(../assets/img/writting-hand.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
 	}
 
 	&#vision {
@@ -842,13 +854,19 @@ section {
 			color: var(--bleu-1);
 			background-color: rgba(255, 255, 255, 0.342);
 			font-size: 2rem;
-			
+
 			z-index: 1;
 		}
 	}
 
 	&#mission {
-		background-color: #f74f04;
+		// background-color: #f74f04;
+
+		background: url(../assets/img/hand-shake.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
 
 		#img-mission {
 			background: url(../assets/img/hand-shake.jpg);
@@ -931,7 +949,8 @@ section {
 		}
 	}
 
-	img, div.img-para {
+	img,
+	div.img-para {
 		position: relative;
 		transition: 0.5s;
 
@@ -1176,10 +1195,12 @@ section {
 	}
 
 	#agenceevent {
+
 		h3,
 		h4,
 		h5 {
-			color: var(--bleu-1);
+			// color: var(--bleu-1);
+			color: #fff;
 		}
 	}
 
@@ -1278,6 +1299,50 @@ section {
 			}*/
 		}
 	}
+
+	#agenceevenementielle {
+		background: url(../assets/img/traiteur_01.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+}
+
+a {
+	&.hover-underline-animation {
+		display: inline-block;
+		position: relative;
+		color: var(--bleu-windows);
+	}
+
+	&.hover-underline-animation:hover:after {
+		content: '→';
+		margin-left: .5rem;
+		transition: content 0.25s ease-out;
+	}
+
+	&.hover-underline-animation:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		// background-color: #0087ca;
+		background-color: var(--bleu-windows);
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+
+	&.hover-underline-animation:hover:before {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
 }
 
 hr.section-divider {
@@ -1304,10 +1369,12 @@ form {
 
 #client {
 	transition: all 500ms linear;
+
 	&.active {
 		opacity: 1;
 		visibility: visible;
 	}
+
 	&.unactive {
 		opacity: 0;
 		visibility: hidden;
@@ -1324,6 +1391,8 @@ footer {
 	background: url("../assets/svg/hexagon04.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 	// font-family: "Poppins", sans-serif;
 	font-size: 1.15rem;
 	line-height: 2rem;
@@ -1387,7 +1456,7 @@ footer {
 	#img-mission {
 		width: 100%;
 	}
-	
+
 	#vision-text {
 		// display: none;
 		top: 0 !important;

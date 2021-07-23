@@ -24,38 +24,41 @@ window.onload = function () {
 	}
 
 	if (radioServices) {
-		const infoClients = document.getElementById('client');
+		const infoClients = document.getElementById("client");
 
-		radioServices.forEach(element => {
-			element.addEventListener('click', () => {
-				infoClients.classList.remove('unactive');
-				infoClients.classList.add('active');
+		radioServices.forEach((element) => {
+			element.addEventListener("click", () => {
+				infoClients.classList.remove("unactive");
+				infoClients.classList.add("active");
 
-				hiddenInfo.forEach(hiddenElement => {
-					hiddenElement.setAttribute('value', element.value);
+				hiddenInfo.forEach((hiddenElement) => {
+					hiddenElement.setAttribute("value", element.value);
 				});
-			})
+			});
 		});
 	}
 
 	if (radioClients) {
 		let formInactive = "";
 
-		radioClients.forEach(element => {
-
-			element.addEventListener('click', () => {
+		radioClients.forEach((element) => {
+			element.addEventListener("click", () => {
 				let attr = element.value;
 				let frmIDActive = "frm-" + attr;
 				let formAcitve = document.getElementById(frmIDActive);
 
-				formInactive = attr == "entreprise" ? formInactive = document.getElementById("frm-particulier") : formInactive = document.getElementById("frm-entreprise");
+				formInactive =
+					attr == "entreprise"
+						? (formInactive =
+								document.getElementById("frm-particulier"))
+						: (formInactive =
+								document.getElementById("frm-entreprise"));
 
 				formAcitve.classList.remove("unactive");
 				formAcitve.classList.add("active");
 				formInactive.classList.remove("active");
 				formInactive.classList.add("unactive");
-
-			})
+			});
 		});
 	}
 };
@@ -70,6 +73,12 @@ const getScrollPosition = () => {
 	if (y > 150) {
 		navWrap.classList.remove(...cls2);
 		navWrap.classList.add(...cls1);
+		backToTop.classList.remove("hide");
+		backToTop.classList.add(
+			"animate__animated",
+			"animate__shakeY",
+			"animate__infnite"
+		);
 	} else {
 		if (y == 0) {
 			if (isOk == "false") {
@@ -77,13 +86,13 @@ const getScrollPosition = () => {
 				navWrap.classList.remove(...cls1);
 				navWrap.classList.add(...cls2);
 			}
-
+			backToTop.classList.add("hide");
+			backToTop.classList.remove(
+				"animate__animated",
+				"animate__shakeY",
+				"animate__infnite"
+			);
 		}
-		// if (isOk == false) {
-		// 	console.log(isOk);
-		// 	navWrap.classList.remove(...clsTemp);
-		// 	navWrap.classList.add(...clsDefault);
-		// }		
 	}
 };
 
@@ -171,6 +180,8 @@ const words = ["DANS UN MONDE", "D'INNOVATION", "PERPETUELLE"];
 // 	ease: "power3.inOut",
 // 	repeat: -1,
 // });
+
+// gsap & scrolltrigger have to be declared in "jshint.options" in the settings.json file in vscode
 let masterTl = gsap
 	.timeline({
 		repeat: -1,

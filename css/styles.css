@@ -49,11 +49,11 @@ html {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5vw;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 4vw;
 }
 
 h3 {
@@ -153,7 +153,7 @@ body #back-to-top {
   min-width: 60px;
   height: 10vh;
   min-height: 60px;
-  background-color: #F8F8F8;
+  background-color: #becde9;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
@@ -712,6 +712,12 @@ em {
   line-height: 1;
 }
 
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20%;
+}
+
 section.content {
   padding: 5.7rem 0;
 }
@@ -778,7 +784,11 @@ section#quefaisonsnous #img-que {
 }
 
 section#valeurs {
-  background: #11204b;
+  background: url(../assets/img/writting-hand.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 section#vision #img-vision {
@@ -802,7 +812,11 @@ section#vision #vision-text {
 }
 
 section#mission {
-  background-color: #f74f04;
+  background: url(../assets/img/hand-shake.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 section#mission #img-mission {
@@ -902,76 +916,90 @@ section .reveal-bleu.active::before {
           transition-delay: 0.5s;
 }
 
-section img, section div.img-para {
+section img,
+section div.img-para {
   position: relative;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-section img.descr, section div.img-para.descr {
+section img.descr,
+section div.img-para.descr {
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 50vh;
 }
 
-section img.img-from-left, section div.img-para.img-from-left {
+section img.img-from-left,
+section div.img-para.img-from-left {
   left: -100px;
   opacity: 0;
 }
 
-section img.img-from-left.active, section div.img-para.img-from-left.active {
+section img.img-from-left.active,
+section div.img-para.img-from-left.active {
   left: 0;
   opacity: 1;
 }
 
-section img.img-from-right, section div.img-para.img-from-right {
+section img.img-from-right,
+section div.img-para.img-from-right {
   right: -100px;
   opacity: 0;
 }
 
-section img.img-from-right.active, section div.img-para.img-from-right.active {
+section img.img-from-right.active,
+section div.img-para.img-from-right.active {
   right: 0;
   opacity: 1;
 }
 
-section img.img-from-top, section div.img-para.img-from-top {
+section img.img-from-top,
+section div.img-para.img-from-top {
   top: -100px;
   opacity: 0;
 }
 
-section img.img-from-top.active, section div.img-para.img-from-top.active {
+section img.img-from-top.active,
+section div.img-para.img-from-top.active {
   top: 0;
   opacity: 1;
 }
 
-section img.img-from-bottom, section div.img-para.img-from-bottom {
+section img.img-from-bottom,
+section div.img-para.img-from-bottom {
   bottom: -100px;
   opacity: 0;
 }
 
-section img.img-from-bottom.active, section div.img-para.img-from-bottom.active {
+section img.img-from-bottom.active,
+section div.img-para.img-from-bottom.active {
   bottom: 0;
   opacity: 1;
 }
 
-section img.img-zoom, section div.img-para.img-zoom {
+section img.img-zoom,
+section div.img-para.img-zoom {
   -webkit-transform: scale(0.1);
           transform: scale(0.1);
   opacity: 0;
 }
 
-section img.img-zoom.active, section div.img-para.img-zoom.active {
+section img.img-zoom.active,
+section div.img-para.img-zoom.active {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
 }
 
-section img.img-appear, section div.img-para.img-appear {
+section img.img-appear,
+section div.img-para.img-appear {
   opacity: 0;
 }
 
-section img.img-appear.active, section div.img-para.img-appear.active {
+section img.img-appear.active,
+section div.img-para.img-appear.active {
   opacity: 1;
 }
 
@@ -1131,7 +1159,7 @@ section #agencecom h5 {
 section #agenceevent h3,
 section #agenceevent h4,
 section #agenceevent h5 {
-  color: var(--bleu-1);
+  color: #fff;
 }
 
 section#comingsoon {
@@ -1226,6 +1254,54 @@ section .wrapper .icons .ico:hover, section .wrapper .icons .ico:active {
   text-decoration: none;
 }
 
+section #agenceevenementielle {
+  background: url(../assets/img/traiteur_01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+a.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--bleu-windows);
+}
+
+a.hover-underline-animation:hover:after {
+  content: '→';
+  margin-left: .5rem;
+  -webkit-transition: content 0.25s ease-out;
+  transition: content 0.25s ease-out;
+}
+
+a.hover-underline-animation:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bleu-windows);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+a.hover-underline-animation:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
 hr.section-divider {
   margin: 6rem auto;
   width: 75vw;
@@ -1274,6 +1350,8 @@ footer {
   background: url("../assets/svg/hexagon04.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   font-size: 1.15rem;
   line-height: 2rem;
 }

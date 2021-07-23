@@ -34,7 +34,7 @@
 
     <?php include_once $page ?>
 
-    <div id="back-to-top" class="hide animate__animated animate__shakeY animate__slower animate__infnite" data-toggle="tooltip" data-placement="left"
+    <div id="back-to-top" class="hide" data-toggle="tooltip" data-placement="left"
     title="Haut de page">
         <i class="fas fa-arrow-up"></i>
     </div>

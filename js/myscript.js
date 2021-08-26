@@ -13,6 +13,9 @@ const radioClients = document.querySelectorAll('input[name="rdostatut"]');
 const radioServices = document.querySelectorAll('input[name="rdoservices"]');
 const hiddenInfo = document.querySelectorAll('input[name="service"]');
 
+// Actualites...
+const screenWidth = window.screen.width;
+
 window.onload = function () {
 	// console.log(isOk);
 	if (isOk == "true") {
@@ -48,9 +51,7 @@ window.onload = function () {
 				let formAcitve = document.getElementById(frmIDActive);
 
 				formInactive =
-					attr == "entreprise"
-						? (formInactive =
-								document.getElementById("frm-particulier"))
+					attr == "entreprise" ? (formInactive = document.getElementById("frm-particulier"))
 						: (formInactive =
 								document.getElementById("frm-entreprise"));
 
@@ -60,6 +61,47 @@ window.onload = function () {
 				formInactive.classList.add("unactive");
 			});
 		});
+	}
+
+	// Actualites...
+	let arrSlides = document.querySelectorAll('img[class*="slide"]');
+	const slideImg = ['sm', 'md', 'lg'];
+	let src_ = "/assets/img/com/";
+	let arrImg = ["/abj.jpeg", "/brochettes.jpeg", "/kids.jpeg", "/lumiere.jpeg", "/lumiere_.jpeg", "/saucisses.jpeg", "/woman.jpeg"];
+	let fldr = "sm";
+	
+	if (screenWidth <= 576) {
+		for (let i = 0; i < arrSlides.length; i++) {
+			if (i == 1) {
+				continue;
+			}
+			const element = arrSlides[i];
+			fldr = "sm";
+			element.src = `${src_}${fldr}${arrImg[i]}`;
+			console.table(element);
+			console.table(element.src);
+		}
+	} else if (screenWidth > 576 && screenWidth <= 768) {
+		for (let i = 0; i < arrSlides.length; i++) {
+			if (i == 1) {
+				continue;
+			}
+			const element = arrSlides[i];
+			fldr = "md";
+			element.src = `${src_}${fldr}${arrImg[i]}`;
+			console.table(element);
+			console.table(element.src);
+		}
+		
+	} else if (screenWidth > 768) {
+		// console.log("TEst...");
+		for (let i = 0; i < arrSlides.length; i++) {
+			const element = arrSlides[i];
+			fldr = "lg";
+			element.src = `${src_}${fldr}${arrImg[i]}`;
+			// console.table(element);
+			// console.table(element.src);
+		}
 	}
 };
 

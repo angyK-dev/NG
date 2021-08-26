@@ -1,11 +1,6 @@
-<section id="actualites" class="full-height content">
-    <input type="hidden" name="isOK" id="is-ok" value="true">
-    <!-- <div class="nova-infos py-2">
-        <div class="nova-msg">
-            Test
-        </div>
-    </div> -->
-
+<section id="actualites" class="full-height ">
+    <input type="hidden" name="isOK" id="is-ok" value="false">
+    
     <div id="slider-container">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -13,19 +8,31 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="/assets/img/festi.jpeg" alt="First slide">
+                    <img class="d-block w-100" src="/assets/img/com/lg/abj.jpeg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/img/laser-beams.jpeg" alt="Second slide">
+                    <img class="d-block w-100" src="/assets/img/com/lg/brochettes.jpeg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/img/business01.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="/assets/img/com/lg/kids.jpeg" alt="Third slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/img/workers01.jpg" alt="Fourth slide">
+                    <img class="d-block w-100" src="/assets/img/com/lg/lumiere.jpeg" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/assets/img/com/lg/lumiere_.jpeg" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/assets/img/com/lg/saucisses.jpeg" alt="Sixth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/assets/img/com/lg/woman.jpeg" alt="Seventh slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -157,9 +164,97 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md">
+            <div class="col-sm-12 col-md my-3">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingPompiers">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapsePompiers" aria-expanded="false"
+                                    aria-controls="collapsePompiers">
+                                    Sapeurs Pompiers 🚒🔥
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapsePompiers" class="collapse show" aria-labelledby="headingPompiers"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Pompiers <br>
+                                📞: 180 <br>
+                                <br>
+
+                                Pompiers Indenié <br>
+                                📞: 27 20 21 12 89 <br>
+                                <br>
+
+                                Pompiers Yopougon <br>
+                                📞: 27 23 45 16 90 <br>
+                                <br>
+
+                                Pompiers Zone 4 <br>
+                                📞: 27 21 35 73 65 <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingPoliceSecours">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapsePoliceSecours" aria-expanded="true" aria-controls="collapsePoliceSecours">
+                                    Police secours 🚔🚨
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapsePoliceSecours" class="collapse" aria-labelledby="headingPoliceSecours"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                📞: 111 / 170
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingUrgencesMedicales">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseUrgencesMedicales" aria-expanded="false"
+                                    aria-controls="collapseUrgencesMedicales">
+                                    Urgences Médicales 🚑🩺
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseUrgencesMedicales" class="collapse" aria-labelledby="headingUrgencesMedicales"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                SAMU 🚑 <br>
+                                📞: 185 / 27 22 44 34 15 <br>
+                                <br>
+
+                                Réanimation 🚑 <br>
+                                📞: 186 <br>
+                                <br>
+
+                                HDA-Ass.médi. D'urgence 🩺 <br>
+                                📞: 07 07 08 07 08 / 05 05 96 05 20 <br>
+                                <br>
+
+                                Médecin urgences 🩺 <br>
+                                📞: 07 07 08 26 26 <br>
+                                <br>
+
+                                SIDA direct 👨‍⚕️ <br>
+                                📞: 27 20 33 14 68 <br>
+                                <br>
+
+                                SOS médecins 👨‍⚕️ <br>
+                                📞: 27 22 44 53 53 <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Numeros d'urgence -->
-                <div class="col-sm-12 col-md my-3">
+                <!-- <div class="col-sm-12 col-md my-3">
                     <div class="card border border-danger">
                         <div class="card-body">
                             <h3 class="card-title text-danger">Numéros d'urgence</h3>
@@ -209,7 +304,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

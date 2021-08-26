@@ -69,33 +69,6 @@ h3 {
           transform: translate(-50%, -50%);
 }
 
-@media (min-aspect-ratio: 16 / 9) {
-  .hero-video {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16 / 9) {
-  .hero-video {
-    width: auto;
-    height: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-video {
-    display: none;
-  }
-  #event {
-    background: url(../assets/img/event01.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
-
 .bold-orange {
   color: var(--orange-2);
   font-weight: bolder;
@@ -112,6 +85,15 @@ h3 {
 
 .title-blue {
   color: var(--bleu-cobalt);
+}
+
+.accordion .btn-link {
+  font-size: 1.4rem;
+}
+
+.accordion .btn-link:hover, .accordion .btn-link:focus, .accordion .btn-link:active {
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 body {
@@ -731,14 +713,12 @@ section#accueil {
 }
 
 section #slider-container {
-  height: 70vh;
+  height: 90vh;
   background-color: transparent;
 }
 
 section #slider-container .carousel-inner img {
-  height: 70vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 90vh;
 }
 
 section h1,
@@ -1394,6 +1374,42 @@ footer .social a .bi-instagram:hover {
 }
 
 /* #region Media */
+@media (max-width: 767px) {
+  #img-nom {
+    background: url(../assets/img/com/abj01.jpeg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  .hero-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  .hero-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-video {
+    display: none;
+  }
+  #event {
+    background: url(../assets/img/event01.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .nav-item::before {
     left: -24px !important;

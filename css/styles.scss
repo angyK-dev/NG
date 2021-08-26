@@ -38,6 +38,8 @@
 	--orange-clair: #dd7b40;
 
 	scroll-behavior: smooth;
+
+	--menu-height: 5.7rem;
 }
 
 $gr-bleu: linear-gradient(to bottom,
@@ -77,7 +79,7 @@ $gr-nova-bleu-180: linear-gradient(180deg,
 ================================================== */
 
 html {
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 h1 {
@@ -138,7 +140,7 @@ body {
 	font-weight: 400;
 	color: var(--color-1);
 	// background-color: #fff;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 	transition: all 200ms linear;
 
 	#nav-wrap {
@@ -726,7 +728,7 @@ em {
 
 section {
 	&.content {
-		padding: 5.7rem 0;
+		padding: var(--menu-height) 0;
 	}
 
 	&#accueil {
@@ -1294,6 +1296,41 @@ section {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 	}
+
+	.sticky-aside {
+		// position: sticky;
+		// position: -webkit-sticky;
+		// display: inline;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		// background: var(--orange-4);
+		background: #f1c033;
+		border: solid .3em #00284e;
+		border-radius: 10px;
+		padding: 1em;
+		// width: 60%;
+		// margin: auto;
+		// height: 10vw;
+		// top: var(--menu-height);
+		// right: var(--menu-height);
+		z-index: 10;
+		cursor: pointer;
+		color: #00284e;
+
+		.jam {
+			display: inline-block;
+			width: 20vh;
+			height: 20vh;
+			background-color: darkmagenta;
+			background-image: url(../assets/img/com/jam.jpg);
+			background-size: contain;
+		}
+
+		img {
+			height: 2.5em;
+		}
+	}
 }
 
 a {
@@ -1481,6 +1518,10 @@ footer {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-attachment: fixed;
+	}
+
+	.sticky-aside {
+		display: none;
 	}
 }
 

@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 const navWrap = document.getElementById("nav-wrap");
 const nav = document.getElementById("nav");
@@ -145,6 +145,13 @@ if (backToTop) {
 		});
 	});
 }
+
+const stickyMessage = document.getElementById('sticky-message');
+stickyMessage.addEventListener("click", () => {
+	// console.log('Hey !!');
+	$('#festibimModal').modal('show');
+	// document.querySelector('#festibimModal').modal('show');
+});
 
 const btnContact = document.getElementById("btncontact");
 

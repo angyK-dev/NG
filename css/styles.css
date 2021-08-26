@@ -34,6 +34,7 @@
   --vert-clair: #34c924;
   --orange-clair: #dd7b40;
   scroll-behavior: smooth;
+  --menu-height: 5.7rem;
 }
 
 @font-face {
@@ -44,10 +45,6 @@
 
 /* #Primary
 ================================================== */
-html {
-  overflow-x: hidden;
-}
-
 h1 {
   font-size: 5vw;
 }
@@ -102,7 +99,6 @@ body {
   line-height: 2.6375rem;
   font-weight: 400;
   color: var(--color-1);
-  overflow-x: hidden;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
@@ -701,7 +697,7 @@ em {
 }
 
 section.content {
-  padding: 5.7rem 0;
+  padding: var(--menu-height) 0;
 }
 
 section#accueil {
@@ -1244,6 +1240,32 @@ section #agenceevenementielle {
   padding-bottom: 6rem;
 }
 
+section .sticky-aside {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #f1c033;
+  border: solid .3em #00284e;
+  border-radius: 10px;
+  padding: 1em;
+  z-index: 10;
+  cursor: pointer;
+  color: #00284e;
+}
+
+section .sticky-aside .jam {
+  display: inline-block;
+  width: 20vh;
+  height: 20vh;
+  background-color: darkmagenta;
+  background-image: url(../assets/img/com/jam.jpg);
+  background-size: contain;
+}
+
+section .sticky-aside img {
+  height: 2.5em;
+}
+
 a.hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -1407,6 +1429,9 @@ footer .social a .bi-instagram:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+  }
+  .sticky-aside {
+    display: none;
   }
 }
 
